@@ -1,0 +1,3 @@
+[submodule "TabModuleOne"]
+	path = TabModuleOne
+	url = git@github.com:n3tr/TabModuleOne.git

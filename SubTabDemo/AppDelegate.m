@@ -12,6 +12,11 @@
 
 #import "SecondViewController.h"
 
+
+// Module Import
+
+#import "ViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,8 +28,12 @@
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
+    ViewController *tabModule1 = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, tabModule1, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
